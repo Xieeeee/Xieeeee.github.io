@@ -18,7 +18,6 @@ Compared with previous methods, Droplet Paired-Tag has higher signal specificty 
 
 For more details, please refer to our [manuscript](https://www.nature.com/articles/s41594-023-01060-1)
 
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/DPT_abstract.png" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -28,5 +27,3 @@ For more details, please refer to our [manuscript](https://www.nature.com/articl
     Schematic and performance of Droplet Paired-Tag.
 </div>
 
-
-{% endraw %}
