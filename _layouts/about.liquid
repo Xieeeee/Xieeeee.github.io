@@ -66,10 +66,11 @@ layout: default
 
     <!-- Projects -->
     {% if page.projects %}
-    <h2>
-      <a href="{{ '/projects/' }}" style="color: inherit">projects</a>
-    </h2>
-    {% include projects.liquid %}
+      <h2>
+        <a href="{{ '/projects/' }}" style="color: inherit">projects</a>
+      </h2>
+      {% include projects.liquid %}
+    {% endif %}
 
     <!-- Social -->
     {% if page.social %}
