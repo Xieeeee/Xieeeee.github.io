@@ -1,81 +1,32 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
-importance: 1
-category: work
-related_publications: true
+title: Droplet Paired-Tag
+description: Single-cell method for joint analysis of histone marks and transcriptome
+img: assets/img/DPT_logo_notext.png
+importance: 2
+category: method
+related_publications: false
 ---
+ 
+Droplet Paired-Tag is a convenient and robust method for multi-modal profiling of histone modifications and transcriptome in single cell. 
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Histone modifications are chemical changes that primarily occur on the tails of histones, which are the scaffold proteins around which DNA is wound. These modifications can alter how tightly or loosely the DNA is wrapped around the histones. When DNA is loosely wound, it becomes more exposed and accessible to various protein machinery; conversely, tightly wound DNA is less accessible. This accessiblity can be used to define the activity of DNA sequence.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Understanding the types of modifications present on genes or regulatory elements is crucial for determining the activity of these sequences. When combined with gene expression measurements, we can better distinguish the functional states of regulatory elements. Obtaining this information in individual cells or specific cell types is particularly important, as it can help identify the key cell population in development or diseases, and tell us which genes and their regulatory elements are more likely to determine the fates of these cells.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Compared with previous methods, Droplet Paired-Tag has higher signal specificty and is way easier to do. In our manuscript, we have used this method to resolve the repressive elements in adult mouse brain, which is difficult to do before. [Other study](https://www.nature.com/articles/s41586-023-06819-6) has utilized Droplet Paired-Tag to characrize enhancers in human brain, and concluded that epi-conserved regulatory elements across multiple species are more likely to be active enhancers.
+
+For more details, please refer to our [manuscript](https://www.nature.com/articles/s41594-023-01060-1)
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/DPT_abstract.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Schematic and performance of Droplet Paired-Tag.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
 
 {% endraw %}
