@@ -14,7 +14,8 @@ It is unclear how the very long DNA strand (around 2 meters) from a human cell i
 
 We combined Hi-C with commercial microfluidics to allow efficient measurement of chromatin conformation in individual cells, which we named Droplet Hi-C. This technique not only enables the analysis of cell type-specific chromatin structures in heterogeneous tissues, such as the mouse brain, but also has been pivotal in detecting copy number or structural variations, including extrachromosomal DNA (ecDNA), in brain cancer cells or glioblastoma. Furthermore, we extended Droplet Hi-C to a multiomics approach (Paired Hi-C), facilitating the simultaneous analysis of gene expression and chromatin conformation in the same cell, thereby linking ecDNA copy number with gene expression variations in brain cancer cells under drug treatment.
 
-For more details, please refer to our [manuscript](https://www.biorxiv.org/content/10.1101/2024.04.18.590148v1)
+For more details, please refer to our [manuscript](https://www.biorxiv.org/content/10.1101/2024.04.18.590148v1).
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

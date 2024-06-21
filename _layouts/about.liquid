@@ -65,14 +65,15 @@ layout: default
     {% endif %}
 
     <!-- Projects -->
-    <a href="{{ '/projects/' }}" style="color: inherit">projects</a>
+    <a href="{{ '/projects/' | relative_url }}" style="color: inherit">projects</a>
     {% include projects.liquid %}
 
     <!-- Social -->
     {% if page.social %}
       <div class="social">
+        {% comment %}
         <div class="contact-icons">{% include social.liquid %}</div>
-
+        {% endcomment %}
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}

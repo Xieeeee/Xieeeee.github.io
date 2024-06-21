@@ -16,7 +16,8 @@ Understanding the types of modifications present on genes or regulatory elements
 
 Compared with previous methods, Droplet Paired-Tag has higher signal specificty and is way easier to do. In our manuscript, we have used this method to resolve the repressive elements in adult mouse brain, which is difficult to do before. [Other study](https://www.nature.com/articles/s41586-023-06819-6) has utilized Droplet Paired-Tag to characrize enhancers in human brain, and concluded that epi-conserved regulatory elements across multiple species are more likely to be active enhancers.
 
-For more details, please refer to our [manuscript](https://www.nature.com/articles/s41594-023-01060-1)
+For more details, please refer to our [manuscript](https://www.nature.com/articles/s41594-023-01060-1).
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
