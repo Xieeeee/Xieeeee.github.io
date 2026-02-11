@@ -1,6 +1,14 @@
 {% if site.footer_fixed %}
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
+      <div class="contact-icons text-center mb-2">
+        {% include social.liquid %}
+      </div>
+      {% if site.contact_note %}
+        <div class="contact-note text-center mb-2">
+          {{ site.contact_note }}
+        </div>
+      {% endif %}
       &copy; {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.last_name }}.
@@ -10,6 +18,14 @@
 {% else %}
   <footer class="sticky-bottom mt-5" role="contentinfo">
     <div class="container">
+      <div class="contact-icons text-center mb-2">
+        {% include social.liquid %}
+      </div>
+      {% if site.contact_note %}
+        <div class="contact-note text-center mb-2">
+          {{ site.contact_note }}
+        </div>
+      {% endif %}
       &copy; {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.last_name }}.

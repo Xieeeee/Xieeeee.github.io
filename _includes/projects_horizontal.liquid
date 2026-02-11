@@ -11,7 +11,19 @@
           <div class="card-body">
             <h3 class="card-title">{{ project.title }}</h3>
             <p class="card-text">{{ project.description }}</p>
+            {% if project.keywords %}
+              <div class="mb-2">
+                {% for keyword in project.keywords %}
+                  <span class="badge badge-light">{{ keyword }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
             <div class="row ml-1 mr-1 p-0">
+              {% if project.paper_url %}
+                <div class="icon mr-2" data-toggle="tooltip" title="Paper">
+                  <a href="{{ project.paper_url }}"><i class="fa-solid fa-file-lines"></i></a>
+                </div>
+              {% endif %}
               {% if project.github %}
                 <div class="github-icon">
                   <div class="icon" data-toggle="tooltip" title="Code Repository">

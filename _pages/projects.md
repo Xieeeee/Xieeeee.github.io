@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: 
+title: research
+permalink: /research/
+description:
 nav: true
 nav_order: 2
-display_categories: 
+display_categories:
 horizontal: true
 ---
 Our body is a complex system. Each cell in our body can have different roles and developmental trajetories, even though they usually have the same genes. The diversity is mainly driven by the way genes are turned on and off in specific places and times. This precious regulation process is controlled by different elements in our genome, through various chemical modifications and conformation changes in DNA or associated proteins, all of which make up what we call the epigenome.
