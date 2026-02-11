@@ -2,7 +2,20 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+}
+
 // Typography
+
+p {
+  margin-bottom: 1.25rem;
+}
 
 p,
 h1,
@@ -37,9 +50,10 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
+  transition: color 0.2s ease;
 
   &:hover {
-    color: var(--global-theme-color);
+    color: var(--global-hover-color);
     text-decoration: underline;
   }
 
@@ -57,10 +71,11 @@ table.table a {
 
 blockquote {
   background: var(--global-bg-color);
-  border-left: 5px solid var(--global-theme-color);
+  border-left: 3px solid var(--global-divider-color);
   margin: 1.5em 0;
-  padding: 1em;
-  font-size: 1.2rem;
+  padding: 1em 1.5em;
+  font-size: 1.05rem;
+  color: var(--global-text-color-light);
 
   p {
     margin-bottom: 0;
@@ -184,11 +199,20 @@ ul.task-list input[type="checkbox"] {
 
 .profile {
   width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+
+  img {
+    max-width: 280px;
+    margin: 0 auto;
+  }
 
   .more-info {
     margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
 
     p {
       display: inline-block;
@@ -198,16 +222,22 @@ ul.task-list input[type="checkbox"] {
 }
 
 .profile.float-right {
-  margin-left: 1rem;
+  margin-left: 0;
+  float: none !important;
 }
 
 .profile.float-left {
-  margin-right: 1rem;
+  margin-right: 0;
+  float: none !important;
 }
 
-@media (min-width: 300px) {
+@media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 100%;
+
+    img {
+      max-width: 320px;
+    }
 
     .address {
       p {
@@ -235,9 +265,10 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   background-color: var(--global-bg-color);
-  opacity: 0.95;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .navbar .dropdown-menu {
@@ -279,6 +310,8 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    letter-spacing: 0.03em;
+    transition: color 0.2s ease;
 
     &:hover {
       color: var(--global-hover-color);
@@ -287,7 +320,7 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: 500;
     color: var(--global-theme-color);
 
     &:hover {
@@ -428,32 +461,45 @@ ul.task-list input[type="checkbox"] {
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-align: center;
   }
 
   a {
     color: var(--global-footer-link-color);
+    transition: color 0.2s ease;
 
     &:hover {
-      color: var(--global-theme-color);
+      color: var(--global-hover-color);
       text-decoration: none;
     }
   }
 }
 
 footer.sticky-bottom {
-  border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 0.8rem;
+  color: var(--global-footer-text-color);
 
   .container {
     text-align: center;
+  }
+
+  a {
+    color: var(--global-footer-link-color);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: none;
+    }
   }
 }
 
@@ -619,24 +665,42 @@ footer.sticky-bottom {
   }
 
   .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
     img {
-      width: 50%;
+      width: 100%;
+    }
+
+    .card-body {
+      padding: 1.5rem;
     }
   }
 
   .grid-sizer,
   .grid-item {
     width: 250px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   h2.category {
-    color: var(--global-divider-color);
+    color: var(--global-text-color-light);
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    text-align: right;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -662,11 +726,12 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
+    color: var(--global-text-color-light);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
-    margin-top: 2rem;
-    text-align: right;
+    margin-top: 2.5rem;
+    text-align: left;
+    font-weight: 400;
   }
 
   ol.bibliography {
@@ -675,7 +740,13 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: none;
+      }
 
       .preview {
       }
@@ -685,11 +756,13 @@ footer.sticky-bottom {
 
         abbr {
           display: inline-block;
-          background-color: var(--global-theme-color);
+          background-color: transparent;
+          color: var(--global-theme-color);
+          border: 1px solid var(--global-theme-color);
           margin-bottom: 0.5rem;
 
           a {
-            color: white;
+            color: var(--global-theme-color);
 
             &:hover {
               text-decoration: none;
