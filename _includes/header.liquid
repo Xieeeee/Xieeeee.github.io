@@ -4,7 +4,7 @@
     <div class="container">
       <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
         {% if site.icon and site.icon contains '.' %}
-          <img src="{{ site.icon | prepend: 'assets/img/' | relative_url }}" alt="logo" style="height: 30px; margin-right: 6px; vertical-align: middle;">
+          <img src="{{ site.icon | prepend: '/assets/img/' | relative_url }}" alt="logo" style="height: 30px; margin-right: 6px; vertical-align: middle;">
         {% endif %}
         {% if page.permalink != '/' %}
           {% if site.title == 'blank' %}
