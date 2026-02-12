@@ -1,46 +1,33 @@
 <div class="col-12 mb-4">
-  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-    <div class="card h-100 hoverable">
-      <div class="row no-gutters">
-        {% if project.img %}
-          <div class="col-md-4">
-            {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 120px, 40vw" alt="project thumbnail" class="card-img" %}
-          </div>
-        {% endif %}
-        <div class="{% if project.img %}col-md-8{% else %}col-md-12{% endif %}">
-          <div class="card-body">
-            <h3 class="card-title">{{ project.title }}</h3>
-            <p class="card-text">{{ project.description }}</p>
-            {% if project.keywords %}
-              <div class="mb-2">
-                {% for keyword in project.keywords %}
-                  <span class="badge badge-light">{{ keyword }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-            <div class="row ml-1 mr-1 p-0">
-              {% if project.paper_url %}
-                <div class="icon mr-2" data-toggle="tooltip" title="Paper">
-                  <a href="{{ project.paper_url }}"><i class="fa-solid fa-file-lines"></i></a>
-                </div>
-              {% endif %}
-              {% if project.github %}
-                <div class="github-icon">
-                  <div class="icon" data-toggle="tooltip" title="Code Repository">
-                    <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
-                  </div>
-                  {% if project.github_stars %}
-                    <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                      <i class="fa-solid fa-star"></i>
-                      <span id="{{ project.github_stars }}-stars"></span>
-                    </span>
-                  {% endif %}
-                </div>
-              {% endif %}
-            </div>
-          </div>
+  <div class="row align-items-center">
+    {% if project.img %}
+      <div class="col-sm-4 col-md-3">
+        <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+          {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 120px, 30vw" alt="project thumbnail" class="img-fluid rounded" %}
+        </a>
+      </div>
+    {% endif %}
+    <div class="{% if project.img %}col-sm-8 col-md-9{% else %}col-12{% endif %}">
+      <h3 class="mt-0 mb-1">
+        <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title }}</a>
+      </h3>
+      <p class="mb-1">{{ project.description }}</p>
+      {% if project.keywords %}
+        <div class="mb-1">
+          {% for keyword in project.keywords %}
+            <span class="badge badge-light">{{ keyword }}</span>
+          {% endfor %}
         </div>
+      {% endif %}
+      <div>
+        {% if project.paper_url %}
+          <a href="{{ project.paper_url }}" class="mr-2" data-toggle="tooltip" title="Paper"><i class="fa-solid fa-file-lines"></i></a>
+        {% endif %}
+        {% if project.github %}
+          <a href="{{ project.github }}" data-toggle="tooltip" title="Code"><i class="fa-brands fa-github"></i></a>
+        {% endif %}
       </div>
     </div>
-  </a>
+  </div>
+  <hr class="mt-3 mb-0">
 </div>
