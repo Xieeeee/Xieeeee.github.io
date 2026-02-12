@@ -1,7 +1,7 @@
 ---
 layout: page
-title: MiniAtlas: a multiomodal histone modification and transcriptome atlas for adult human brain
-description: Single-Cell Atlas of Transcription and Chromatin States Reveals Regulatory Programs in the Human Brain
+title: "MiniAtlas: a multimodal histone modification and transcriptome atlas for adult human brain"
+description: "Single-Cell Atlas of Transcription and Chromatin States Reveals Regulatory Programs in the Human Brain"
 img: assets/img/MiniAtlas_logo.jpg
 importance: 3
 category: application

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: FNIH Heart: dissect regulatory networks underlying heart failures 
+title: "FNIH Heart: dissect regulatory networks underlying heart failures"
 description: Single cell multiomics and chromatin architecture reveal human heart failure gene regulatory programs
 img: assets/img/FNIH_Heart_logo.png
 importance: 4
