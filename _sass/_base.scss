@@ -457,6 +457,29 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Footer social icons
+.footer-social {
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+
+  a {
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    i::before {
+      color: var(--global-text-color);
+    }
+
+    &:hover {
+      transform: scale(1.25);
+
+      i::before {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
 // Footer
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
