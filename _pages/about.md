@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: I am a scientist studying how epigenome regulates gene expression # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: I am a scientist studying how epigenome regulates cell behaviors.
 
 profile:
   align: right
@@ -15,10 +15,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-My name is Yang Xie (谢旸). I am currently a Ph.D. candidate in [Ren lab](https://renlab.sdsc.edu/renlab_website/) at UC San Diego. My primary research interests include gene regulation, chromatin organization, and epigenomics.
+My name is Yang Xie (谢旸). My research lies at the intersection of gene regulation, chromatin biology, and epigenomics, with a focus on understanding how the epigenome encodes cellular identity and disease risk.
 
-During my graduate studies, I focused on developing high-throughput, multi-modal single-cell sequencing methods to capture the epigenomic diversity in mammalian brains, aiming to link epigenome with transcription to better understand how non-coding sequences control gene expression. Check out the [project](https://xieeeee.github.io/projects/) section to know more about my work. 
+I am currently a postdoctoral researcher at the New York Genome Center, where I leverage machine learning approaches to model cell-state dynamics in development and metabolic disorders. During my Ph.D. training with Dr. Bing Ren at the University of California San Diego, I developed high-throughput, multi-modal single-cell sequencing technologies to map epigenomic diversity in mammalian brains. My goal is to connect chromatin states with genetic variation, transcriptional output, and cellular phenotype, ultimately understanding how complex non-coding perturbations propagate to cause disease.
 
-I grew up in Shantou, a charming coastal city known for its delicious food. I completed my BSc in Biological Sciences from Fudan University, Shanghai. Before joing Ren lab, I worked in [O'Shea lab](https://www.salk.edu/scientist/clodagh-oshea/) at Salk Institute, where I studied how DNA folds using electron microscope and live-cell imaging.
+I grew up in Shantou, a coastal city in southern China famous for its vibrant food culture. I received my B.Sc. in Biological Sciences from Fudan University in Shanghai. Before joining the Ren Lab, I trained with Dr. Clodagh O’Shea at the Salk Institute for Biological Studies, where I investigated chromosome folding using electron microscopy and live-cell imaging, an experience that sparked my fascination with 3D genome architecture.
 
-Besides research, I enjoy listening to music, exploring different cuisines and cooking. The best part of my weekend is (currently) composed of: Fuji Kaze, Yakiniku, and Hazy IPA.
+Outside the lab, I enjoy music, coffee, mixology and small culinary experiments. My current favorites (respectively): Fuji Kaze, Steady State Roasting (Carlsbad), Dante (SoHo) and Yakiniku.

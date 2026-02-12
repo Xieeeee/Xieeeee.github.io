@@ -1,14 +1,14 @@
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. candidate
-      institution: University of California San Diego, San Diego, CA
+    - title: University of California San Diego, San Diego, CA
+      institution: Ph.D. candidate (advised by Dr.Bing Ren)
       department: Biomedical Sciences Graduate Program, School of Medicine
       year: 2018 - 2024
       description:
         - "Advised by Dr. Bing Ren"
-    - title: B.Sc.
-      institution: Fudan University, Shanghai
+    - title: Fudan University, Shanghai
+      institution: B.Sc.
       department: "Major: Biological Sciences, School of Life Sciences"
       year: 2014 - 2018
       description:
@@ -17,29 +17,29 @@
 - title: Work Experience
   type: time_table
   contents:
-    - title: Postdoctoral Research Associate
-      institution: New York Genome Center
+    - title: New York Genome Center
+      institution: Postdoctoral Research Associate
       year: 2025 - Present
       description:
         - "Led a pilot study for the $100M Center for Multiomic Human Brain Cell Atlas grant under the NIH BRAIN Initiative, establishing feasibility and analytical frameworks for large-scale multimodal profiling."
         - "Authored multiple manuscripts on large-scale single-cell integrative analyses of the mammalian brain, leveraging multimodal datasets with a particular focus on active and repressive histone modifications."
         - "Discovered that repressive histone modifications encode epigenetic memory, shaping cell-type-, region-, and species-specific gene regulatory programs across human brain."
-    - title: Postdoctoral Research Associate
-      institution: University of California San Diego
+    - title: University of California San Diego
+      institution: Postdoctoral Research Associate
       year: 2024 - 2025
       description:
         - "Led data analysis across multiple multi-investigator projects within the NIH 4D Nucleome Program to dissect gene regulatory mechanisms underlying heart failure and metabolic dysfunction-associated steatotic liver disease (MASLD/MASH)."
         - "In human ischemic and non-ischemic heart failure samples, identified cardiomyocyte-specific erosion of chromatin compartmentalization, and uncovered disease- and etiology-specific transcription factors driving pathological progression in cardiomyocytes and fibroblasts."
         - "In human MASLD/MASH cohorts, demonstrated that simple steatosis and steatohepatitis are governed by distinct transcriptional programs, and systematically linked major MASH-associated genetic risk loci to their putative effector genes."
-    - title: Graduate Student Researcher
-      institution: University of California San Diego
+    - title: University of California San Diego
+      institution: Graduate Student Researcher
       year: 2021 - 2024
       description:
         - "Developed droplet-based single-cell technologies for gene regulation and genome architecture."
         - "Developed Droplet Paired-Tag, a high-throughput single-cell multiomic technology for simultaneous profiling of histone modifications and transcriptomes. Applied this method to annotate cell-type-specific chromatin states and regulatory elements in the mouse cortex, enabling direct linkage between epigenetic landscapes and gene expression."
         - "Co-developed Droplet Hi-C and extended it into a multiomic platform (Paired Hi-C) to jointly measure 3D genome architecture and additional molecular layers. Leveraged this approach to characterize structural variation heterogeneity in cancer models and uncover dynamic evolution of extrachromosomal DNA (ecDNA) in glioblastoma cells during drug resistance."
-    - title: Graduate Student Researcher
-      institution: Salk Institute for Biological Studies
+    - title: Salk Institute for Biological Studies
+      institution: Graduate Student Researcher
       year: 2019 - 2020
       description:
         - "Studied chromosome folding using electron microscopy (ChromEMT) and live cell imaging"
@@ -51,12 +51,10 @@
       items:
         - Epigenomics
         - Chromatin organization
+        - Histone modification
     - title: Methodology
       items:
         - Single-cell multi-omics
         - High-throughput sequencing
 
-- title: Interests
-  type: list
-  contents:
-    - "Music / Coffee / Cooking / Mixology"
+
