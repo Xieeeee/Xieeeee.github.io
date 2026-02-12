@@ -1,48 +1,50 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Yang Xie (谢旸)
-    - name: Languages
-      value: English, Chinese
-
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. Candidate
-      institution: University of California, San Diego (UCSD)
-      year: PLACEHOLDER_START_YEAR - Present
+    - title: Ph.D. candidate
+      institution: University of California San Diego, San Diego, CA
+      department: Biomedical Sciences Graduate Program, School of Medicine
+      year: 2018 - 2024
       description:
-        - "Ren Lab, Department of Cellular and Molecular Medicine"
-        - "PLACEHOLDER: Add research focus description"
-    - title: B.Sc. in Biological Sciences
-      institution: Fudan University, Shanghai, China
-      year: PLACEHOLDER_YEAR
+        - "Advised by Dr. Bing Ren"
+    - title: B.Sc.
+      institution: Fudan University, Shanghai
+      department: "Major: Biological Sciences, School of Life Sciences"
+      year: 2014 - 2018
       description:
-        - "PLACEHOLDER: Add details about undergraduate work"
+        - "Advised by Dr. Guodong Ren"
 
-- title: Experience
+- title: Work Experience
   type: time_table
   contents:
-    - title: Graduate Research Assistant
-      institution: Ren Lab, UC San Diego
-      year: PLACEHOLDER_START_YEAR - Present
+    - title: Postdoctoral Research Associate
+      institution: New York Genome Center
+      year: 2025 - Present
       description:
-        - "PLACEHOLDER: Add description of graduate research"
-    - title: Research Assistant
-      institution: O'Shea Lab, Salk Institute for Biological Studies
-      year: PLACEHOLDER_START_YEAR - PLACEHOLDER_END_YEAR
+        - "Led a pilot study for the $100M Center for Multiomic Human Brain Cell Atlas grant under the NIH BRAIN Initiative, establishing feasibility and analytical frameworks for large-scale multimodal profiling."
+        - "Authored multiple manuscripts on large-scale single-cell integrative analyses of the mammalian brain, leveraging multimodal datasets with a particular focus on active and repressive histone modifications."
+        - "Discovered that repressive histone modifications encode epigenetic memory, shaping cell-type-, region-, and species-specific gene regulatory programs across human brain."
+    - title: Postdoctoral Research Associate
+      institution: University of California San Diego
+      year: 2024 - 2025
       description:
-        - Studied DNA folding using electron microscopy and live-cell imaging
+        - "Led data analysis across multiple multi-investigator projects within the NIH 4D Nucleome Program to dissect gene regulatory mechanisms underlying heart failure and metabolic dysfunction-associated steatotic liver disease (MASLD/MASH)."
+        - "In human ischemic and non-ischemic heart failure samples, identified cardiomyocyte-specific erosion of chromatin compartmentalization, and uncovered disease- and etiology-specific transcription factors driving pathological progression in cardiomyocytes and fibroblasts."
+        - "In human MASLD/MASH cohorts, demonstrated that simple steatosis and steatohepatitis are governed by distinct transcriptional programs, and systematically linked major MASH-associated genetic risk loci to their putative effector genes."
+    - title: Graduate Student Researcher
+      institution: University of California San Diego
+      year: 2021 - 2024
+      description:
+        - "Developed droplet-based single-cell technologies for gene regulation and genome architecture."
+        - "Developed Droplet Paired-Tag, a high-throughput single-cell multiomic technology for simultaneous profiling of histone modifications and transcriptomes. Applied this method to annotate cell-type-specific chromatin states and regulatory elements in the mouse cortex, enabling direct linkage between epigenetic landscapes and gene expression."
+        - "Co-developed Droplet Hi-C and extended it into a multiomic platform (Paired Hi-C) to jointly measure 3D genome architecture and additional molecular layers. Leveraged this approach to characterize structural variation heterogeneity in cancer models and uncover dynamic evolution of extrachromosomal DNA (ecDNA) in glioblastoma cells during drug resistance."
+    - title: Graduate Student Researcher
+      institution: Salk Institute for Biological Studies
+      year: 2019 - 2020
+      description:
+        - "Studied chromosome folding using electron microscopy (ChromEMT) and live cell imaging"
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: PLACEHOLDER_YEAR
-      items:
-        - "PLACEHOLDER: Add your awards"
-
-- title: Academic Interests
+- title: Research Focus
   type: nested_list
   contents:
     - title: Gene Regulation
@@ -54,7 +56,7 @@
         - Single-cell multi-omics
         - High-throughput sequencing
 
-- title: Other Interests
+- title: Interests
   type: list
   contents:
-    - "<u>Hobbies:</u> Music, Cooking, Exploring cuisines"
+    - "Music / Coffee / Cooking / Mixology"
