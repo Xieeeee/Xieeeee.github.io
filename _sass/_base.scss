@@ -814,7 +814,7 @@ footer.sticky-bottom {
 
   // Desktop: fill left/right column
   @media (min-width: 768px) {
-    width: 45%;
+    width: 32%;
     flex-shrink: 0;
   }
 
@@ -853,7 +853,7 @@ footer.sticky-bottom {
   padding: 0 1rem 1.5rem;
 
   @media (min-width: 768px) {
-    width: 55%;
+    width: 68%;
     padding: 1.5rem 2rem;
     display: flex;
     align-items: center;
