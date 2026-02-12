@@ -7,7 +7,8 @@ importance: 1
 category: method
 related_publications: false
 keywords: [single-cell, chromatin conformation, Hi-C, 3D genome, microfluidics]
-paper_url: https://www.biorxiv.org/content/10.1101/2024.04.18.590148v1
+paper_url: https://www.nature.com/articles/s41587-024-02447-1
+paper_name: Nat. Biotechnol. (2025)
 ---
  
 Droplet Hi-C is a high-throughput method for profiling chromatin conformation in single cells. 

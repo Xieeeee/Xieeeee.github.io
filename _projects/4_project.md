@@ -8,6 +8,7 @@ category: method
 related_publications: false
 keywords: [keyword1, keyword2, keyword3]
 paper_url: https://doi.org/YOUR_DOI
+paper_name: Journal (Year)
 ---
 
 Write your project description here. Explain the motivation, approach, and key findings.
