@@ -1,31 +1,32 @@
-<div class="col-12 mb-2">
-  <div class="row">
-    {% if project.img %}
-      <div class="col-sm-3 col-md-2 mb-2">
-        <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-          {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 120px, 30vw" alt="project thumbnail" class="img-fluid rounded" %}
-        </a>
-      </div>
-    {% endif %}
-    <div class="{% if project.img %}col-sm-9 col-md-10{% else %}col-12{% endif %}">
-      <h5 class="font-weight-bold mt-0 mb-1">
+<article class="research-post">
+  {% if project.img %}
+    <div class="research-post__image-wrap">
+      <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+        <div class="research-post__image" style="background-image: url('{{ project.img | prepend: '/' | relative_url }}')"></div>
+      </a>
+    </div>
+  {% endif %}
+  <div class="research-post__content-wrap">
+    <div class="research-post__content">
+      <h2 class="research-post__title">
         <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title }}</a>
-      </h5>
+      </h2>
       {% if project.keywords %}
-        <p class="text-muted mb-1" style="font-size: 0.85rem;">
-          {% for keyword in project.keywords %}{{ keyword }}{% unless forloop.last %} · {% endunless %}{% endfor %}
+        <p class="research-post__keywords">
+          {% for keyword in project.keywords %}{{ keyword }}{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
         </p>
       {% endif %}
-      <p class="mb-2">{{ project.description }}</p>
-      <div style="font-size: 0.9rem;">
-        {% if project.paper_url %}
-          <a href="{{ project.paper_url }}">[{{ project.paper_name | default: "Paper" }}]</a>
-        {% endif %}
-        {% if project.github %}
-          <a href="{{ project.github }}" class="ml-1">[Code]</a>
-        {% endif %}
-      </div>
+      <p class="research-post__description">{{ project.description }}</p>
+      {% if project.paper_url or project.github %}
+        <div class="research-post__links">
+          {% if project.paper_url %}
+            <a href="{{ project.paper_url }}">[{{ project.paper_name | default: "Paper" }}]</a>
+          {% endif %}
+          {% if project.github %}
+            <a href="{{ project.github }}" class="ml-2">[Code]</a>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   </div>
-  <hr>
-</div>
+</article>

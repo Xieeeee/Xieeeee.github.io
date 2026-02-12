@@ -11,6 +11,26 @@ body {
   line-height: 1.7;
 }
 
+// Page load animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container[role="main"] {
+  animation: fadeInUp 0.6s cubic-bezier(0.2, 0.3, 0, 1) both;
+}
+
+footer {
+  animation: fadeInUp 0.5s cubic-bezier(0.2, 0.3, 0, 1) 0.2s both;
+}
+
 // Typography
 
 p {
@@ -724,6 +744,174 @@ footer.sticky-bottom {
     font-weight: 400;
     font-size: 1.2rem;
     letter-spacing: 0.02em;
+  }
+}
+
+// Research project cards (blog-style layout)
+.research-post {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+  animation: fadeInUp 0.5s cubic-bezier(0.2, 0.3, 0, 1) both;
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+
+  // Mobile: stacked
+  @media (max-width: 767px) {
+    background: var(--global-code-bg-color);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  // Desktop: side-by-side
+  @media (min-width: 768px) {
+    display: flex;
+    min-height: 280px;
+    background: var(--global-code-bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+
+    // Alternate image position on even items
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .research-post__content {
+        margin-left: 0;
+        margin-right: -2rem;
+      }
+    }
+  }
+
+  &:hover {
+    .research-post__image {
+      transform: scale(1.08);
+    }
+
+    .research-post__content {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .research-post__title a {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.research-post__image-wrap {
+  position: relative;
+  overflow: hidden;
+
+  // Mobile: fixed aspect ratio
+  @media (max-width: 767px) {
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+
+  // Desktop: fill left/right column
+  @media (min-width: 768px) {
+    width: 45%;
+    flex-shrink: 0;
+  }
+
+  a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @media (min-width: 768px) {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.research-post__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  padding: 1rem;
+  transition: transform 0.8s cubic-bezier(0.2, 0.3, 0, 1);
+}
+
+.research-post__content-wrap {
+  width: 100%;
+  padding: 0 1rem 1.5rem;
+
+  @media (min-width: 768px) {
+    width: 55%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.research-post__content {
+  position: relative;
+  margin-top: -1.5rem;
+  padding: 1.5rem;
+  background: var(--global-card-bg-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  transition: box-shadow 0.4s cubic-bezier(0.2, 0.3, 0, 1);
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+    margin-left: -2rem;
+    padding: 2rem;
+  }
+}
+
+.research-post__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+}
+
+.research-post__keywords {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+
+.research-post__description {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--global-text-color);
+}
+
+.research-post__links {
+  font-size: 0.9rem;
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
