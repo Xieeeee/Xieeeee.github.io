@@ -6,7 +6,7 @@ img: assets/img/DPT_logo_notext.png
 importance: 2
 category: method
 related_publications: false
-keywords: [single-cell, epigenomics, histone modifications, multi-omics, transcriptome]
+keywords: [single-cell multiome, epigenomics, histone modifications, transcriptome]
 paper_url: https://www.nature.com/articles/s41594-023-01060-1
 paper_name: Nat. Struct. Mol. Biol. (2023)
 ---
