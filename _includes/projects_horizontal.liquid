@@ -1,13 +1,13 @@
 <div class="col-12 mb-2">
   <div class="row">
     {% if project.img %}
-      <div class="col-sm-4 col-md-3 mb-2">
+      <div class="col-sm-3 col-md-2 mb-2">
         <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
           {% include figure.liquid loading="eager" path=project.img sizes="(min-width: 768px) 120px, 30vw" alt="project thumbnail" class="img-fluid rounded" %}
         </a>
       </div>
     {% endif %}
-    <div class="{% if project.img %}col-sm-8 col-md-9{% else %}col-12{% endif %}">
+    <div class="{% if project.img %}col-sm-9 col-md-10{% else %}col-12{% endif %}">
       <h5 class="font-weight-bold mt-0 mb-1">
         <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title }}</a>
       </h5>
