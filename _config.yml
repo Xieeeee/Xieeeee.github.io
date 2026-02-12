@@ -8,7 +8,7 @@ middle_name:
 last_name: Xie
 email: tvtxieyang@outlook.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  I am a scientist studying how epigenome regulates gene expression
+  I am a scientist studying how epigenome regulates cell behaviors
 footer_text: ""
 keywords: Yang Xie, Epigenome, Xieeee, UCSD, Ren Lab# add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -107,8 +107,8 @@ x_username: Xieeee4 # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
-contact_note: >
-  
+contact_note: # removed
+
 
   For questions, protocols, collaboration, or food recommendation in San Diego, please find me at tvtxieyang@outlook.com :)
 
