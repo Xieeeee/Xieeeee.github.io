@@ -3,7 +3,9 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+.DS_Store
 .DS_store
+._*
 .ruby-version
 .tweet-cache
 Gemfile.lock
