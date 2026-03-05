@@ -23,6 +23,25 @@ body {
   }
 }
 
+// Background light effect animations
+@keyframes bg-shift {
+  0% {
+    background-position: 0% 0%, 100% 50%, 50% 100%;
+  }
+  100% {
+    background-position: 15% 10%, 85% 40%, 35% 90%;
+  }
+}
+
+@keyframes grain-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(3px, 2px);
+  }
+}
+
 .container[role="main"] {
   animation: fadeInUp 0.6s cubic-bezier(0.2, 0.3, 0, 1) both;
 }
