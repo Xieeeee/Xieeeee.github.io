@@ -355,8 +355,8 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  background-color: var(--global-bg-color);
+  border-bottom: none;
+  background-color: transparent;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
