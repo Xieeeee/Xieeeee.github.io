@@ -1,0 +1,1 @@
+!function(){var n=document.querySelectorAll(".blob");n.length&&document.addEventListener("mousemove",function(e){var t=e.clientX/window.innerWidth,o=e.clientY/window.innerHeight;n.forEach(function(n,e){var i=20*(e+1);n.style.transform="translate("+t*i+"px, "+o*i+"px)"})})}();
