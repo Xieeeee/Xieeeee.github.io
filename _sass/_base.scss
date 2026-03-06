@@ -4,41 +4,11 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--global-bg-color);
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.7;
-  background-color: transparent;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: -20%;
-  pointer-events: none;
-  z-index: -1;
-  background-image:
-    radial-gradient(ellipse 60% 50% at 20% 30%, var(--bg-gradient-1), transparent),
-    radial-gradient(ellipse 50% 60% at 80% 50%, var(--bg-gradient-2), transparent),
-    radial-gradient(ellipse 70% 55% at 40% 80%, var(--bg-gradient-3), transparent);
-  background-size: 140% 140%;
-  animation: bg-shift 20s ease-in-out infinite alternate;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: var(--bg-grain-opacity);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  animation: grain-drift 8s ease-in-out infinite alternate;
-  will-change: transform;
 }
 
 // Page load animations
@@ -50,25 +20,6 @@ body::after {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-// Background light effect animations
-@keyframes bg-shift {
-  0% {
-    background-position: 0% 0%, 100% 50%, 50% 100%;
-  }
-  100% {
-    background-position: 15% 10%, 85% 40%, 35% 90%;
-  }
-}
-
-@keyframes grain-drift {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(3px, 2px);
   }
 }
 
@@ -1185,11 +1136,6 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
-}
-
-html.transition body::before,
-html.transition body::after {
-  transition: none !important;
 }
 
 // Extra Markdown style (post Customization)
