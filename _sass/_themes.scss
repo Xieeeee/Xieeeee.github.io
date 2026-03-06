@@ -33,6 +33,12 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
+  // Background light effect gradient colors (light mode)
+  --bg-gradient-1: rgba(240, 200, 180, 0.45);
+  --bg-gradient-2: rgba(255, 220, 150, 0.35);
+  --bg-gradient-3: rgba(210, 190, 240, 0.30);
+  --bg-grain-opacity: 0.04;
+
   #light-toggle-system {
     padding-left: 10px;
     padding-top: 12px;
@@ -101,6 +107,12 @@ html[data-theme="dark"] {
   .repo-img-dark {
     display: block;
   }
+
+  // Background light effect gradient colors (dark mode)
+  --bg-gradient-1: rgba(38, 152, 186, 0.20);
+  --bg-gradient-2: rgba(60, 40, 120, 0.25);
+  --bg-gradient-3: rgba(20, 40, 80, 0.30);
+  --bg-grain-opacity: 0.03;
 }
 
 html[data-theme-setting="dark"] {
