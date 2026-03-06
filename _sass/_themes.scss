@@ -33,6 +33,11 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
+  // Ambient background blob colors (light mode)
+  --blob-1-color: #e8e8e8;
+  --blob-2-color: #f2f2f2;
+  --blob-3-color: #ffffff;
+
   #light-toggle-system {
     padding-left: 10px;
     padding-top: 12px;
@@ -94,6 +99,11 @@ html[data-theme="dark"] {
   --global-danger-block-bg: #ffe0e0;
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
+
+  // Ambient background blob colors (dark mode)
+  --blob-1-color: #2e2e32;
+  --blob-2-color: #262628;
+  --blob-3-color: #323236;
 
   .repo-img-light {
     display: none;
