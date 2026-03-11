@@ -1,3 +1,19 @@
+// Glassmorphism navbar on scroll
+(function () {
+  var navbar = document.getElementById("navbar");
+  if (navbar) {
+    function onScroll() {
+      if (window.scrollY > 10) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll(); // apply on load in case page is already scrolled
+  }
+})();
+
 $(document).ready(function () {
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
