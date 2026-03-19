@@ -1073,6 +1073,11 @@ footer.sticky-bottom {
         border-bottom: none;
       }
 
+      .first-author-entry {
+        border-left: 3px solid var(--global-theme-color);
+        padding-left: 0.75rem;
+      }
+
       .preview {
       }
 
