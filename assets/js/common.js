@@ -14,6 +14,35 @@
   }
 })();
 
+// Smooth page transitions: fade out before navigating away
+(function () {
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest("a");
+    if (
+      !link ||
+      !link.href ||
+      link.target === "_blank" ||
+      link.hasAttribute("download") ||
+      e.ctrlKey ||
+      e.metaKey ||
+      e.shiftKey ||
+      link.hostname !== window.location.hostname ||
+      link.href === window.location.href ||
+      link.href.startsWith(window.location.href + "#") ||
+      link.classList.contains("abstract") ||
+      link.classList.contains("bibtex") ||
+      link.classList.contains("award")
+    )
+      return;
+
+    e.preventDefault();
+    document.body.classList.add("page-leaving");
+    setTimeout(function () {
+      window.location.href = link.href;
+    }, 400);
+  });
+})();
+
 $(document).ready(function () {
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {

@@ -81,7 +81,7 @@ body {
   background-size: 200px 200px;
 }
 
-// Page load animations
+// Page transition animations
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -93,12 +93,34 @@ body {
   }
 }
 
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
 .container[role="main"] {
-  animation: fadeInUp 0.6s cubic-bezier(0.2, 0.3, 0, 1) both;
+  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 footer {
-  animation: fadeInUp 0.5s cubic-bezier(0.2, 0.3, 0, 1) 0.2s both;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+// Fade-out when navigating away
+body.page-leaving {
+  .container[role="main"] {
+    animation: fadeOutDown 0.4s cubic-bezier(0.4, 0, 1, 1) forwards;
+  }
+
+  footer {
+    animation: fadeOutDown 0.3s cubic-bezier(0.4, 0, 1, 1) 0.05s forwards;
+  }
 }
 
 // Typography
