@@ -24,6 +24,7 @@
         - "Led a pilot study for the $100M Center for Multiomic Human Brain Cell Atlas grant under the NIH BRAIN Initiative, establishing feasibility and analytical frameworks for large-scale multimodal profiling."
         - "Authored multiple manuscripts on large-scale single-cell integrative analyses of the mammalian brain, leveraging multimodal datasets with a particular focus on active and repressive histone modifications."
         - "Discovered that repressive histone modifications encode epigenetic memory, shaping cell-type-, region-, and species-specific gene regulatory programs across human brain."
+        - "Key collaborators: <i>Lei Chang, Guojie Zhong, Kai Li, Cindy Tatiana Baez-Becerra, Jonathan Rink, Wubin Ding, Maria Margarita Behrens, Joseph Ecker, Xiangming Xu</i>"
     - title: University of California San Diego
       institution: Postdoctoral Research Associate
       year: 2024 - 2025
@@ -31,6 +32,7 @@
         - "Led data analysis across multiple multi-investigator projects within the NIH 4D Nucleome Program to dissect gene regulatory mechanisms underlying heart failure and metabolic dysfunction-associated steatotic liver disease (MASLD/MASH)."
         - "In human ischemic and non-ischemic heart failure samples, identified cardiomyocyte-specific erosion of chromatin compartmentalization, and uncovered disease- and etiology-specific transcription factors driving pathological progression in cardiomyocytes and fibroblasts."
         - "In human MASLD/MASH cohorts, demonstrated that simple steatosis and steatohepatitis are governed by distinct transcriptional programs, and systematically linked major MASH-associated genetic risk loci to their putative effector genes."
+        - "Key collaborators: <i>Luca Tucciarone, Elie Farah, Weston Elison, Lei Chang, Kyle Gaulton, Neil Chi, Stavros Drakos, David Brenner</i>"
     - title: University of California San Diego
       institution: Graduate Student Researcher
       year: 2021 - 2024
@@ -38,11 +40,13 @@
         - "Developed droplet-based single-cell technologies for gene regulation and genome architecture."
         - "Developed Droplet Paired-Tag, a high-throughput single-cell multiomic technology for simultaneous profiling of histone modifications and transcriptomes. Applied this method to annotate cell-type-specific chromatin states and regulatory elements in the mouse cortex, enabling direct linkage between epigenetic landscapes and gene expression."
         - "Co-developed Droplet Hi-C and extended it into a multiomic platform (Paired Hi-C) to jointly measure 3D genome architecture and additional molecular layers. Leveraged this approach to characterize structural variation heterogeneity in cancer models and uncover dynamic evolution of extrachromosomal DNA (ecDNA) in glioblastoma cells during drug resistance."
+        - "Key collaborators: <i>Chenxu Zhu, Lei Chang, Brett Taylor, Zhaoning Johnny Wang, Ming Hu</i>"
     - title: Salk Institute for Biological Studies
       institution: Graduate Student Researcher
       year: 2019 - 2020
       description:
         - "Studied chromosome folding using electron microscopy (ChromEMT) and live cell imaging"
+        - "Key collaborators: <i>Horng Ou</i>"
 
 - title: Research Focus
   type: nested_list
