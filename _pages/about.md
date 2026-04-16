@@ -21,4 +21,4 @@ I am currently a postdoctoral researcher at the New York Genome Center, where I 
 
 I grew up in Shantou, a coastal city in southern China famous for its vibrant food culture. I received my B.Sc. in Biological Sciences from Fudan University in Shanghai. Before joining the Ren Lab, I trained with Dr. Clodagh O’Shea at the Salk Institute for Biological Studies, where I investigated chromosome folding using electron microscopy and live-cell imaging, an experience that sparked my fascination with 3D genome architecture.
 
-Outside the lab, I enjoy music, coffee, mixology and small culinary experiments. My current favorites (respectively): Fuji Kaze, Steady State Roasting (Carlsbad), Dante (SoHo) and Yakiniku.
+Outside the lab, I enjoy music, coffee, mixology and small culinary experiments. My current favorites (respectively): Sakanaction, Steady State Roasting (Carlsbad), Dante (SoHo) and Yakiniku.
