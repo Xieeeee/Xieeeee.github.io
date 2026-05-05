@@ -68,7 +68,7 @@
       {% elsif site.lazy_loading_images %}
         loading="lazy"
       {% endif %}
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      onerror="this.onerror=null;var s=this.parentNode.querySelector('source.responsive-img-srcset');if(s){s.remove();var src=this.src;this.removeAttribute('src');this.src=src;}"
     >
   </picture>
 
