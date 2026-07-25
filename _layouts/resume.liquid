@@ -1,0 +1,123 @@
+---
+layout: default
+---
+
+{% assign cv = site.data.resume_cv %}
+
+<div class="resume">
+  <header class="resume__head">
+    <h1 class="resume__title">{{ page.title }}</h1>
+    {% if page.cv_pdf %}
+      <a
+        class="resume__cv-btn"
+        href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >&darr; Full CV (PDF)</a
+      >
+    {% endif %}
+  </header>
+
+  {% if cv.education and cv.education.size > 0 %}
+    <section class="resume__section">
+      <h2 class="resume__label">Education</h2>
+      {% for item in cv.education %}
+        <div class="entry entry--tight">
+          <div class="entry__rail">{{ item.years }}</div>
+          <div>
+            <h3 class="entry__org entry__org--sm">{{ item.org }}</h3>
+            {% if item.role %}<p class="entry__role">{{ item.role }}</p>{% endif %}
+            {% if item.meta %}<p class="entry__meta">{{ item.meta }}</p>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if cv.experience and cv.experience.size > 0 %}
+    <section class="resume__section">
+      <h2 class="resume__label">Experience</h2>
+      {% for item in cv.experience %}
+        <div class="entry">
+          {% if item.current %}
+            <div class="entry__rail entry__rail--stack">
+              <span>{{ item.years }}</span>
+              <span class="entry__badge">Current</span>
+            </div>
+          {% else %}
+            <div class="entry__rail">{{ item.years }}</div>
+          {% endif %}
+          <div>
+            <h3 class="entry__org">{{ item.org }}</h3>
+            {% if item.role %}<p class="entry__role">{{ item.role }}</p>{% endif %}
+            {% if item.bullets and item.bullets.size > 0 %}
+              <ul class="entry__bullets">
+                {% for bullet in item.bullets %}
+                  <li>{{ bullet }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if item.collaborators and item.collaborators.size > 0 %}
+              <div class="entry__collabs">
+                <span class="entry__collabs-label">With</span>
+                {% for person in item.collaborators %}
+                  <span class="chip">{{ person }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if cv.mentees.size > 0 or cv.teaching.size > 0 %}
+    <section class="resume__section">
+      <h2 class="resume__label">Teaching &amp; Mentorship</h2>
+
+      {% if cv.mentees and cv.mentees.size > 0 %}
+        <div class="entry entry--tight">
+          <div class="entry__rail-label">Mentees</div>
+          <div class="mentees">
+            {% for person in cv.mentees %}
+              <div class="mentee">
+                <div>
+                  <p class="mentee__name">{{ person.name }}</p>
+                  <p class="mentee__years">{{ person.years }}</p>
+                </div>
+                <p class="mentee__role">{{ person.role }}</p>
+                {% if person.now %}<p class="mentee__now">Now: {{ person.now }}</p>{% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% for item in cv.teaching %}
+        <div class="entry">
+          <div class="entry__rail">{{ item.years }}</div>
+          <div>
+            <h3 class="entry__org entry__org--xs">{{ item.title }}</h3>
+            {% if item.meta %}<p class="entry__meta">{{ item.meta }}</p>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if cv.service and cv.service.size > 0 %}
+    <section class="resume__section">
+      <h2 class="resume__label">Professional Service</h2>
+      {% for group in cv.service %}
+        <div class="entry{% unless forloop.last %} entry--tight{% endunless %}">
+          <div class="entry__rail-label entry__rail-label--lower">{{ group.label }}</div>
+          <div class="tags">
+            {% for venue in group.venues %}
+              <span class="tag{% if group.style == 'outline' %} tag--outline{% endif %}">{{ venue }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+</div>

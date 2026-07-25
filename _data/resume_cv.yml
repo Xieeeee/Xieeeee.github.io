@@ -1,0 +1,108 @@
+# Content for the /resume/ page, rendered by _layouts/resume.liquid.
+#
+# Deliberately NOT named `resume.yml`: _layouts/cv.liquid branches on
+# `site.data.resume` to switch into JSON-Resume mode, so that filename
+# would silently change how the old CV layout renders.
+#
+# `bullets` may contain inline HTML (e.g. <strong>) and is rendered unescaped.
+
+education:
+  - years: "2018–2024"
+    org: University of California San Diego
+    role: "Ph.D., Biomedical Sciences"
+    meta: "School of Medicine · Advised by Dr. Bing Ren"
+  - years: "2014–2018"
+    org: Fudan University
+    role: "B.Sc., Biological Sciences"
+    meta: "School of Life Sciences, Shanghai · Advised by Dr. Guodong Ren"
+
+experience:
+  - years: "2025–"
+    current: true
+    org: New York Genome Center
+    role: Postdoctoral Research Associate
+    bullets:
+      - "Led the pilot study for the $100M Center for Multiomic Human Brain Cell Atlas (NIH BRAIN Initiative), establishing feasibility and analytical frameworks for large-scale multimodal profiling."
+      - "Discovered that repressive histone modifications encode epigenetic memory, shaping cell-type-, region-, and species-specific gene regulatory programs across the human brain."
+      - "Authored multiple manuscripts on single-cell integrative analyses of the mammalian brain, focused on active and repressive histone modifications."
+    collaborators:
+      - Lei Chang
+      - Guojie Zhong
+      - Kai Li
+      - Cindy Tatiana Baez-Becerra
+      - Jonathan Rink
+      - Wubin Ding
+      - M. Margarita Behrens
+      - Joseph Ecker
+      - Xiangming Xu
+
+  - years: "2024–2025"
+    org: University of California San Diego
+    role: Postdoctoral Research Associate
+    bullets:
+      - "Led data analysis across multi-investigator projects in the NIH 4D Nucleome Program, dissecting gene regulatory mechanisms in heart failure and MASLD/MASH."
+      - "Identified cardiomyocyte-specific erosion of chromatin compartmentalization in human heart failure, and uncovered etiology-specific transcription factors driving progression in cardiomyocytes and fibroblasts."
+      - "Showed that simple steatosis and steatohepatitis are governed by distinct transcriptional programs, and linked major MASH risk loci to putative effector genes."
+    collaborators:
+      - Luca Tucciarone
+      - Elie Farah
+      - Weston Elison
+      - Lei Chang
+      - Kyle Gaulton
+      - Neil Chi
+      - Stavros Drakos
+      - David Brenner
+
+  - years: "2021–2024"
+    org: University of California San Diego
+    role: "Graduate Student Researcher · Ren Lab"
+    bullets:
+      - "Developed <strong>Droplet Paired-Tag</strong>, a high-throughput single-cell multiomic method profiling histone modifications and transcriptomes together; applied it to annotate cell-type-specific chromatin states and regulatory elements in mouse cortex."
+      - "Co-developed <strong>Droplet Hi-C</strong> and extended it to <strong>Paired Hi-C</strong>, characterizing structural-variant heterogeneity in cancer models and dynamic ecDNA evolution in glioblastoma under drug resistance."
+    collaborators:
+      - Chenxu Zhu
+      - Lei Chang
+      - Brett Taylor
+      - Zhaoning Johnny Wang
+      - Ming Hu
+
+  - years: "2019–2020"
+    org: Salk Institute for Biological Studies
+    role: Graduate Student Researcher
+    bullets:
+      - "Studied chromosome folding by electron microscopy (ChromEMT) and live-cell imaging."
+    collaborators:
+      - Horng Ou
+
+mentees:
+  - name: Bohan Huang
+    years: "2023–2026"
+    role: Master student
+    now: "graduate student, Fudan University"
+  - name: Melissa Vu
+    years: "2024–2026"
+    role: Research Associate
+    now: "Research Associate, UC San Diego"
+  - name: Eric Xu
+    years: "2026"
+    role: Research Associate
+    now: "undergraduate, UC Berkeley"
+
+teaching:
+  - years: Fall 2021
+    title: "Graduate Instructional Apprentice - The Cell"
+    meta: "Division of Biological Sciences, UC San Diego"
+
+service:
+  - label: Reviewer
+    style: filled
+    venues:
+      - BMC Genomics
+      - Medical Oncology
+  - label: Co-reviewer
+    style: outline
+    venues:
+      - Cell
+      - Nature Methods
+      - Nature Genetics
+      - Genome Research

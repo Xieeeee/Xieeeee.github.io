@@ -1,0 +1,363 @@
+/*******************************************************************************
+ * Styles for the /resume/ page (_layouts/resume.liquid).
+ *
+ * Everything is scoped under `.resume` so none of it leaks into other pages.
+ * The page shell (max-width, horizontal gutter, nav, footer) is deliberately
+ * NOT redefined here -- `.container` in _layout.scss already provides the
+ * site's 1000px column, so the resume column lines up with every other page.
+ *
+ * Greys are declared once as custom properties and re-declared for dark mode,
+ * so the page inverts with the theme toggle.
+ ******************************************************************************/
+
+.resume {
+  // Light theme: values come from the design handoff.
+  --resume-ink: #{$grey-900}; // headings, primary text
+  --resume-ink-2: #343a40; // bullet text, tags
+  --resume-ink-3: #495057; // roles, chips, CV button
+  --resume-muted: #5c636b; // meta lines (AA: 6.1:1 on white)
+  --resume-faint: #6c757d; // years, section labels (AA: 4.7:1 on white)
+  --resume-rule: #e9ecef; // section borders, chip borders
+  --resume-rule-2: #f1f3f5; // mentee row separators
+  --resume-border: #dee2e6; // CV button border
+  --resume-surface: #f8f9fa; // chip / outline-tag background
+  --resume-surface-2: #f1f3f5; // badge, filled-tag background
+  --resume-dot: #ced4da; // bullet dot
+
+  --resume-rail: 124px;
+  --resume-rail-gap: 36px;
+}
+
+html[data-theme="dark"] .resume {
+  // Mirrored for dark mode. --resume-rule tracks the theme's own divider so
+  // the section rules match the rest of the site.
+  --resume-ink: #{$grey-color-light};
+  --resume-ink-2: #dee2e6;
+  --resume-ink-3: #ced4da;
+  --resume-muted: #9a9a9e; // AA: 6.1:1 on dark bg
+  --resume-faint: #8a8a90; // AA: 5.0:1 on dark bg
+  --resume-rule: var(--global-divider-color);
+  --resume-rule-2: #343438;
+  --resume-border: #4a4a4e;
+  --resume-surface: #232326;
+  --resume-surface-2: #2a2a2e;
+  --resume-dot: #5a5a5e;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Page head                                                                   */
+/* -------------------------------------------------------------------------- */
+
+.resume__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 16px 0 48px;
+}
+
+.resume__title {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  color: var(--resume-ink);
+}
+
+.resume__cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 18px;
+  border: 1px solid var(--resume-border);
+  border-radius: 4px;
+  color: var(--resume-ink-3);
+  font-size: 14px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--resume-ink);
+    color: var(--resume-ink);
+    background-color: var(--resume-surface);
+    text-decoration: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Sections                                                                    */
+/* -------------------------------------------------------------------------- */
+
+.resume__section {
+  border-top: 1px solid var(--resume-rule);
+  padding: 40px 0 8px;
+}
+
+.resume__label {
+  margin: 0 0 32px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--resume-faint);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Entry: year rail + body                                                     */
+/* -------------------------------------------------------------------------- */
+
+.resume .entry {
+  display: grid;
+  grid-template-columns: var(--resume-rail) 1fr;
+  gap: var(--resume-rail-gap);
+  padding-bottom: 44px;
+  break-inside: avoid;
+}
+
+.resume .entry--tight {
+  padding-bottom: 34px;
+}
+
+.entry__rail {
+  font-size: 14px;
+  color: var(--resume-faint);
+  padding-top: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.entry__rail--stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.entry__rail-label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--resume-faint);
+  padding-top: 3px;
+}
+
+.entry__rail-label--lower {
+  padding-top: 5px;
+}
+
+.entry__badge {
+  padding: 2px 8px;
+  border-radius: 3px;
+  background-color: var(--resume-surface-2);
+  color: var(--resume-ink-3);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.entry__org {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  color: var(--resume-ink);
+}
+
+.entry__org--sm {
+  font-size: 20px;
+}
+
+.entry__org--xs {
+  font-size: 17px;
+  letter-spacing: -0.01em;
+}
+
+.entry__role {
+  margin: 6px 0 0;
+  font-size: 16px;
+  color: var(--resume-ink-3);
+}
+
+.entry__meta {
+  margin: 5px 0 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--resume-muted);
+}
+
+.entry__bullets {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 68ch;
+
+  li {
+    position: relative;
+    padding-left: 17px;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--resume-ink-2);
+    text-wrap: pretty;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--resume-dot);
+    }
+  }
+
+  strong {
+    font-weight: 700;
+    color: var(--resume-ink);
+  }
+}
+
+/* Collaborator chips (non-interactive) */
+.entry__collabs {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.entry__collabs-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--resume-faint);
+  margin-right: 4px;
+}
+
+.resume .chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: var(--resume-surface);
+  border: 1px solid var(--resume-rule);
+  font-size: 12.5px;
+  color: var(--resume-ink-3);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Mentees                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.mentees {
+  display: flex;
+  flex-direction: column;
+}
+
+.mentee {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.3fr;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--resume-rule-2);
+  align-items: baseline;
+  break-inside: avoid;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.mentee__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--resume-ink);
+}
+
+.mentee__years {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: var(--resume-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.mentee__role,
+.mentee__now {
+  margin: 0;
+  font-size: 14.5px;
+}
+
+.mentee__role {
+  color: var(--resume-ink-3);
+}
+
+.mentee__now {
+  color: var(--resume-muted);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Service tags                                                                */
+/* -------------------------------------------------------------------------- */
+
+.resume .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.resume .tag {
+  padding: 5px 12px;
+  border-radius: 4px;
+  background-color: var(--resume-surface-2);
+  color: var(--resume-ink-2);
+  font-size: 14px;
+}
+
+.resume .tag--outline {
+  background-color: var(--resume-surface);
+  border: 1px solid var(--resume-rule);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsive: the rail collapses above the body                               */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .resume .entry {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .entry__rail,
+  .entry__rail--stack {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .entry__rail-label,
+  .entry__rail-label--lower {
+    padding-top: 0;
+  }
+
+  .mentee {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .resume__title {
+    font-size: 36px;
+  }
+}
