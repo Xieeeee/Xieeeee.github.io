@@ -62,7 +62,9 @@ html[data-theme="dark"] .resume {
   font-size: 44px;
   line-height: 1.1;
   letter-spacing: -0.025em;
-  font-weight: 700;
+  // No font-weight here on purpose: .resume__title is an <h1>, so it
+  // inherits the theme's heading weight exactly like .post-title on every
+  // other page. This keeps the two titles the same boldness by construction.
   color: var(--resume-ink);
 }
 
