@@ -29,6 +29,11 @@ jobs:
               "giscus.repo": "${{ github.repository }}",
               "baseurl": ""
             }
+      # Same step as deploy.yml: without it jekyll-imagemagick cannot emit the
+      # responsive .webp variants, and the checker reports images as missing
+      # that the real deploy generates just fine.
+      - name: Install ImageMagick 🖼️
+        run: sudo apt-get update && sudo apt-get install -y imagemagick webp
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
