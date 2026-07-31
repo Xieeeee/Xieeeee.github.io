@@ -10,8 +10,8 @@ keywords: [single-cell multiome, epigenomics, histone modifications, transcripto
 paper_url: https://www.nature.com/articles/s41594-023-01060-1
 paper_name: Nat. Struct. Mol. Biol. (2023)
 ---
- 
-Droplet Paired-Tag is a convenient and robust method for multi-modal profiling of histone modifications and transcriptome in single cell. 
+
+Droplet Paired-Tag is a convenient and robust method for multi-modal profiling of histone modifications and transcriptome in single cell.
 
 Histone modifications are chemical changes that primarily occur on the tails of histones, which are the scaffold proteins around which DNA is wound. These modifications can alter how tightly or loosely the DNA is wrapped around the histones. When DNA is loosely wound, it becomes more exposed and accessible to various protein machinery; conversely, tightly wound DNA is less accessible. This accessiblity can be used to define the activity of DNA sequence.
 
@@ -21,7 +21,6 @@ Compared with previous methods, Droplet Paired-Tag has higher signal specificty 
 
 For more details, please refer to our [manuscript](https://www.nature.com/articles/s41594-023-01060-1).
 
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/DPT_abstract.png" title="example image" class="img-fluid rounded z-depth-1" %}
@@ -30,4 +29,3 @@ For more details, please refer to our [manuscript](https://www.nature.com/articl
 <div class="caption">
     Schematic and performance of Droplet Paired-Tag.
 </div>
-

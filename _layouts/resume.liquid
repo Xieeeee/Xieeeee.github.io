@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 {% assign cv = site.data.resume_cv %}
 
 <div class="resume">
@@ -26,8 +25,12 @@ layout: default
           <div class="entry__rail">{{ item.years }}</div>
           <div>
             <h3 class="entry__org entry__org--sm">{{ item.org }}</h3>
-            {% if item.role %}<p class="entry__role">{{ item.role }}</p>{% endif %}
-            {% if item.meta %}<p class="entry__meta">{{ item.meta }}</p>{% endif %}
+            {% if item.role %}
+              <p class="entry__role">{{ item.role }}</p>
+            {% endif %}
+            {% if item.meta %}
+              <p class="entry__meta">{{ item.meta }}</p>
+            {% endif %}
           </div>
         </div>
       {% endfor %}
@@ -49,7 +52,9 @@ layout: default
           {% endif %}
           <div>
             <h3 class="entry__org">{{ item.org }}</h3>
-            {% if item.role %}<p class="entry__role">{{ item.role }}</p>{% endif %}
+            {% if item.role %}
+              <p class="entry__role">{{ item.role }}</p>
+            {% endif %}
             {% if item.bullets and item.bullets.size > 0 %}
               <ul class="entry__bullets">
                 {% for bullet in item.bullets %}
@@ -86,7 +91,9 @@ layout: default
                   <p class="mentee__years">{{ person.years }}</p>
                 </div>
                 <p class="mentee__role">{{ person.role }}</p>
-                {% if person.now %}<p class="mentee__now">Now: {{ person.now }}</p>{% endif %}
+                {% if person.now %}
+                  <p class="mentee__now">Now: {{ person.now }}</p>
+                {% endif %}
               </div>
             {% endfor %}
           </div>
@@ -98,7 +105,9 @@ layout: default
           <div class="entry__rail">{{ item.years }}</div>
           <div>
             <h3 class="entry__org entry__org--xs">{{ item.title }}</h3>
-            {% if item.meta %}<p class="entry__meta">{{ item.meta }}</p>{% endif %}
+            {% if item.meta %}
+              <p class="entry__meta">{{ item.meta }}</p>
+            {% endif %}
           </div>
         </div>
       {% endfor %}

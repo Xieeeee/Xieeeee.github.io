@@ -19,7 +19,6 @@ We combined Hi-C with commercial microfluidics to allow efficient measurement of
 
 For more details, please refer to our [manuscript](https://www.nature.com/articles/s41587-024-02447-1).
 
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/Paired-Hi-C_figure_abstract.png" title="example image" class="img-fluid rounded z-depth-1" %}

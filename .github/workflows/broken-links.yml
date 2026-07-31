@@ -49,4 +49,7 @@ jobs:
         with:
           fail: true
           # removed md files that include liquid tags
-          args: --user-agent 'curl/7.54' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --verbose --no-progress './**/*.md' './**/*.html'
+          # Publishers (science.org, medRxiv/bioRxiv, ...) sit behind bot protection and
+          # answer automated requests with 403/429 even when the link is fine in a browser,
+          # so those statuses are accepted rather than treated as broken links.
+          args: --user-agent 'curl/7.54' --accept '200..=299,403,429' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --verbose --no-progress './**/*.md' './**/*.html'

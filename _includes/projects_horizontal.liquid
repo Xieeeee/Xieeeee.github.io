@@ -13,14 +13,17 @@
       </h2>
       {% if project.keywords %}
         <p class="research-post__keywords">
-          {% for keyword in project.keywords %}{{ keyword }}{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
+          {% for keyword in project.keywords -%}
+            {{- keyword -}}
+            {%- unless forloop.last %} &middot; {% endunless -%}
+          {%- endfor %}
         </p>
       {% endif %}
       <p class="research-post__description">{{ project.description }}</p>
       {% if project.paper_url or project.github %}
         <div class="research-post__links">
           {% if project.paper_url %}
-            <a href="{{ project.paper_url }}">[{{ project.paper_name | default: "Paper" }}]</a>
+            <a href="{{ project.paper_url }}">[{{ project.paper_name | default: 'Paper' }}]</a>
           {% endif %}
           {% if project.github %}
             <a href="{{ project.github }}" class="ml-2">[Code]</a>
