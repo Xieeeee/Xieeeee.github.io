@@ -1,6 +1,9 @@
 name: Check for broken links
 
 on:
+  # Allows re-running the check on demand, e.g. after a fix that the paths
+  # filter below does not match.
+  workflow_dispatch:
   push:
     branches:
       - master
