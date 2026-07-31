@@ -21,12 +21,13 @@ No JavaScript, no dependencies. The effect is implemented entirely via CSS on `b
 
 ### Layer Structure
 
-| Layer | Element | Purpose |
-|---|---|---|
-| Gradient | `body::before` | Shifting radial gradients for the light color effect |
-| Grain | `body::after` | SVG `feTurbulence` noise texture for frosted-glass feel |
+| Layer    | Element        | Purpose                                                 |
+| -------- | -------------- | ------------------------------------------------------- |
+| Gradient | `body::before` | Shifting radial gradients for the light color effect    |
+| Grain    | `body::after`  | SVG `feTurbulence` noise texture for frosted-glass feel |
 
 Both layers are:
+
 - `position: fixed` — cover the full viewport at all times
 - `pointer-events: none` — never interfere with content interaction
 - `z-index: -1` — sit behind all page content
@@ -36,6 +37,7 @@ Both layers are:
 Two independent `@keyframes`:
 
 1. **`bg-shift`** — 20s, `ease-in-out`, `infinite alternate`
+
    - Moves gradient `background-position` by ~15% on each axis
    - Creates slow drifting light feel
 

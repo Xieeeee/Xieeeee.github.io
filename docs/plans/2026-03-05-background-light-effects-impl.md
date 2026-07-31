@@ -13,6 +13,7 @@
 ### Task 1: Add theme color variables for gradient layers
 
 **Files:**
+
 - Modify: `_sass/_themes.scss`
 
 The existing `:root` block (light mode) and `html[data-theme="dark"]` block each need new CSS custom properties for the three gradient stop colors. This keeps theme reactivity consistent with the rest of the site.
@@ -20,6 +21,7 @@ The existing `:root` block (light mode) and `html[data-theme="dark"]` block each
 **Step 1: Open the file and locate the two theme blocks**
 
 The file has two blocks to modify:
+
 - `:root { ... }` — light mode (around line 5)
 - `html[data-theme="dark"] { ... }` — dark mode (around line 68)
 
@@ -28,11 +30,11 @@ The file has two blocks to modify:
 Add these lines before the closing `}` of the `:root` block:
 
 ```scss
-  // Background light effect gradient colors (light mode)
-  --bg-gradient-1: rgba(240, 200, 180, 0.45);
-  --bg-gradient-2: rgba(255, 220, 150, 0.35);
-  --bg-gradient-3: rgba(210, 190, 240, 0.30);
-  --bg-grain-opacity: 0.04;
+// Background light effect gradient colors (light mode)
+--bg-gradient-1: rgba(240, 200, 180, 0.45);
+--bg-gradient-2: rgba(255, 220, 150, 0.35);
+--bg-gradient-3: rgba(210, 190, 240, 0.3);
+--bg-grain-opacity: 0.04;
 ```
 
 **Step 3: Add dark mode gradient variables inside `html[data-theme="dark"] { ... }`**
@@ -40,11 +42,11 @@ Add these lines before the closing `}` of the `:root` block:
 Add these lines before the closing `}` of the dark mode block:
 
 ```scss
-  // Background light effect gradient colors (dark mode)
-  --bg-gradient-1: rgba(38, 152, 186, 0.20);
-  --bg-gradient-2: rgba(60, 40, 120, 0.25);
-  --bg-gradient-3: rgba(20, 40, 80, 0.30);
-  --bg-grain-opacity: 0.03;
+// Background light effect gradient colors (dark mode)
+--bg-gradient-1: rgba(38, 152, 186, 0.2);
+--bg-gradient-2: rgba(60, 40, 120, 0.25);
+--bg-gradient-3: rgba(20, 40, 80, 0.3);
+--bg-grain-opacity: 0.03;
 ```
 
 **Step 4: Commit**
@@ -59,6 +61,7 @@ git commit -m "feat: add CSS variables for background light effect gradient colo
 ### Task 2: Add keyframe animations to `_base.scss`
 
 **Files:**
+
 - Modify: `_sass/_base.scss`
 
 Two independent `@keyframes` definitions. Add them right after the existing `@keyframes fadeInUp` block (around line 15–28 of `_base.scss`).
@@ -73,10 +76,16 @@ It ends around line 24. Add the new keyframes immediately after.
 // Background light effect animations
 @keyframes bg-shift {
   0% {
-    background-position: 0% 0%, 100% 50%, 50% 100%;
+    background-position:
+      0% 0%,
+      100% 50%,
+      50% 100%;
   }
   100% {
-    background-position: 15% 10%, 85% 40%, 35% 90%;
+    background-position:
+      15% 10%,
+      85% 40%,
+      35% 90%;
   }
 }
 
@@ -102,6 +111,7 @@ git commit -m "feat: add bg-shift and grain-drift keyframe animations"
 ### Task 3: Add the gradient layer pseudo-element (`body::before`)
 
 **Files:**
+
 - Modify: `_sass/_base.scss`
 
 Add the gradient pseudo-element rule. Place it after the `body { ... }` block (around line 12) and before the `// Page load animations` comment.
@@ -110,17 +120,18 @@ Add the gradient pseudo-element rule. Place it after the `body { ... }` block (a
 
 ```scss
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: -20%;
   width: 140%;
   height: 140%;
   pointer-events: none;
   z-index: -1;
-  background-image:
-    radial-gradient(ellipse 60% 50% at 20% 30%, var(--bg-gradient-1), transparent),
-    radial-gradient(ellipse 50% 60% at 80% 50%, var(--bg-gradient-2), transparent),
-    radial-gradient(ellipse 70% 55% at 40% 80%, var(--bg-gradient-3), transparent);
+  background-image: radial-gradient(ellipse 60% 50% at 20% 30%, var(--bg-gradient-1), transparent), radial-gradient(
+      ellipse 50% 60% at 80% 50%,
+      var(--bg-gradient-2),
+      transparent
+    ), radial-gradient(ellipse 70% 55% at 40% 80%, var(--bg-gradient-3), transparent);
   background-size: 140% 140%;
   animation: bg-shift 20s ease-in-out infinite alternate;
   will-change: background-position;
@@ -146,6 +157,7 @@ git commit -m "feat: add animated gradient background layer via body::before"
 ### Task 4: Add the grain/noise layer pseudo-element (`body::after`)
 
 **Files:**
+
 - Modify: `_sass/_base.scss`
 
 Add the grain pseudo-element rule immediately after the `body::before` block added in Task 3.
@@ -156,7 +168,7 @@ The grain texture uses an inline SVG with `feTurbulence`. The SVG is URL-encoded
 
 ```scss
 body::after {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -171,6 +183,7 @@ body::after {
 ```
 
 Explanation of SVG:
+
 - `feTurbulence type='fractalNoise'` — generates a static noise pattern
 - `baseFrequency='0.65'` — controls grain density (higher = finer grain)
 - `numOctaves='3'` — adds detail layers to the noise
@@ -186,6 +199,7 @@ Expected: No errors.
 
 Run: `bundle exec jekyll serve`
 Open `http://localhost:4000` in a browser. You should see:
+
 - Soft warm color glow in the background (light mode)
 - Barely-visible grain texture over it
 - Toggle dark mode — the glow should shift to cool teal/indigo tones
@@ -202,6 +216,7 @@ git commit -m "feat: add animated grain texture overlay via body::after"
 ### Task 5: Verify theme transitions work cleanly
 
 **Files:**
+
 - No code changes — verification only
 
 The site has a theme transition class (`html.transition`) in `_base.scss` (around line 1132) that applies `transition: all 750ms` to everything during a theme switch. This will smoothly fade the gradient colors between light and dark mode automatically, since the gradient uses CSS custom properties.
@@ -229,9 +244,9 @@ No code changes needed if all looks good. If you see any z-index layering issues
 
 ## Summary of all changed files
 
-| File | Change |
-|---|---|
+| File                 | Change                                                               |
+| -------------------- | -------------------------------------------------------------------- |
 | `_sass/_themes.scss` | Add 4 CSS custom properties to `:root` and `html[data-theme="dark"]` |
-| `_sass/_base.scss` | Add 2 `@keyframes`, `body::before`, `body::after` |
+| `_sass/_base.scss`   | Add 2 `@keyframes`, `body::before`, `body::after`                    |
 
 Total new CSS: ~50 lines. Zero new files, zero JS, zero external assets.
