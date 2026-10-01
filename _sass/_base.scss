@@ -1155,6 +1155,75 @@ footer.sticky-bottom {
         }
       }
 
+      .tldr {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.32s ease;
+
+        > div {
+          overflow: hidden;
+        }
+
+        .tldr-card {
+          margin-top: 0.5rem;
+          padding: 0.5rem 0.75rem;
+          border-radius: 6px;
+          background: var(--global-tldr-bg-color);
+          border: 1px solid var(--global-tldr-border-color);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          opacity: 0;
+          transform: translateY(-6px);
+          transition:
+            opacity 0.25s ease 0.05s,
+            transform 0.3s ease;
+
+          p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.55;
+          }
+        }
+
+        .tldr-kicker {
+          display: block;
+          font-size: 0.68rem;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--global-theme-color);
+        }
+      }
+
+      .row:hover .tldr,
+      .row:focus-within .tldr {
+        grid-template-rows: 1fr;
+
+        .tldr-card {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      // Touch screens have no hover, so keep the summary open
+      @media (hover: none) {
+        .tldr {
+          grid-template-rows: 1fr;
+
+          .tldr-card {
+            opacity: 1;
+            transform: none;
+          }
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .tldr,
+        .tldr .tldr-card {
+          transition: none;
+        }
+      }
+
       .links {
         a.btn {
           color: var(--global-text-color);

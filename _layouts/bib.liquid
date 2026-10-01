@@ -170,6 +170,18 @@
       {{ entry.note | strip }}
     </div>
 
+    {% if entry.tldr %}
+      <!-- One-sentence summary, slides open on hover -->
+      <div class="tldr">
+        <div>
+          <div class="tldr-card">
+            <span class="tldr-kicker">In one sentence</span>
+            <p>{{ entry.tldr }}</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}

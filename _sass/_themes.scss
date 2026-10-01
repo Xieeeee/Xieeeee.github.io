@@ -38,6 +38,10 @@
   --blob-2-color: #f2f2f2;
   --blob-3-color: #ffffff;
 
+  // Publication one-sentence summary card (light mode)
+  --global-tldr-bg-color: rgba(255, 255, 255, 0.62);
+  --global-tldr-border-color: rgba(45, 45, 45, 0.12);
+
   #light-toggle-system {
     padding-left: 10px;
     padding-top: 12px;
@@ -108,6 +112,10 @@ html[data-theme="dark"] {
   --blob-1-color: #2e2e32;
   --blob-2-color: #262628;
   --blob-3-color: #323236;
+
+  // Publication one-sentence summary card (dark mode)
+  --global-tldr-bg-color: rgba(40, 40, 44, 0.58);
+  --global-tldr-border-color: rgba(38, 152, 186, 0.28);
 
   .repo-img-light {
     display: none;
