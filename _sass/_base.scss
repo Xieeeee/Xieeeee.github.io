@@ -15,67 +15,39 @@ body {
   line-height: 1.7;
 }
 
-// Ambient background blobs
+// Ambient hero background (WebGL warp shader + node grid, see assets/js/ambient-bg.js).
+// It covers the first screen, scrolls with the page and fades out toward the bottom.
 .ambient-layer {
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: min(100vh, 1020px);
+  height: min(100svh, 1020px);
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--ambient-hero-gradient);
+}
+
+.ambient-shader,
+.ambient-grid {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
+  -webkit-mask: linear-gradient(#000000fc 0%, #000000e8 8.98%, transparent 100%);
+  mask: linear-gradient(#000000fc 0%, #000000e8 8.98%, transparent 100%);
 }
 
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.6;
-  animation: blob-drift infinite alternate ease-in-out;
-  will-change: transform;
+.ambient-shader {
+  opacity: 0;
+  transition: opacity 1.2s ease;
 }
 
-.blob-1 {
-  width: 800px;
-  height: 800px;
-  background: var(--blob-1-color);
-  top: -200px;
-  left: -100px;
-  animation-duration: 45s;
-}
-
-.blob-2 {
-  width: 600px;
-  height: 600px;
-  background: var(--blob-2-color);
-  bottom: -100px;
-  right: -100px;
-  animation-duration: 38s;
-  animation-delay: -10s;
-}
-
-.blob-3 {
-  width: 400px;
-  height: 400px;
-  background: var(--blob-3-color);
-  top: 40%;
-  left: 40%;
-  opacity: 0.8;
-  animation-duration: 50s;
-  animation-delay: -5s;
-}
-
-@keyframes blob-drift {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(50px, -30px) scale(1.1);
-  }
-  100% {
-    transform: translate(-20px, 40px) scale(0.95);
-  }
+.ambient-layer.has-shader .ambient-shader {
+  opacity: 1;
 }
 
 .noise-overlay {

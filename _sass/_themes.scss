@@ -33,10 +33,11 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
-  // Ambient background blob colors (light mode)
-  --blob-1-color: #e8e8e8;
-  --blob-2-color: #f2f2f2;
-  --blob-3-color: #ffffff;
+  // Ambient hero background (light mode)
+  --ambient-hero-gradient: linear-gradient(180deg, #e6e6e6 0%, rgba(255, 255, 255, 0) 100%);
+  --ambient-shader-colors: #b0b0b0, #ffffff, #ffffff;
+  --ambient-grid-rgb: 45, 45, 45;
+  --ambient-grid-alpha: 0.08;
 
   // Publication one-sentence summary card (light mode)
   --global-tldr-bg-color: rgba(255, 255, 255, 0.62);
@@ -108,10 +109,11 @@ html[data-theme="dark"] {
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
-  // Ambient background blob colors (dark mode)
-  --blob-1-color: #2e2e32;
-  --blob-2-color: #262628;
-  --blob-3-color: #323236;
+  // Ambient hero background (dark mode)
+  --ambient-hero-gradient: linear-gradient(180deg, #2a2a2d 0%, rgba(28, 28, 29, 0) 100%);
+  --ambient-shader-colors: #4a4a4f, #1c1c1d, #1c1c1d;
+  --ambient-grid-rgb: 255, 255, 255;
+  --ambient-grid-alpha: 0.06;
 
   // Publication one-sentence summary card (dark mode)
   --global-tldr-bg-color: rgba(40, 40, 44, 0.58);

@@ -19,9 +19,8 @@
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Ambient background -->
     <div class="ambient-layer" aria-hidden="true">
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
+      <canvas class="ambient-shader"></canvas>
+      <canvas class="ambient-grid"></canvas>
     </div>
     <div class="noise-overlay" aria-hidden="true"></div>
     <!-- Header -->
