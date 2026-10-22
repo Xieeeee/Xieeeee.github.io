@@ -11,7 +11,8 @@
       paper_url: https://doi.org/10.64898/2026.02.02.703166
       meta:
         - { label: Species, value: Human }
-        - { label: Tissue, value: "Brain, 18 regions" }
+        - { label: Tissue, value: Brain }
+        - { label: Cell number, value: "751,077" }
         - { label: Assays, value: RNA + active and repressive histone marks }
 
     - title: Human heart failure multimodal atlas
@@ -21,7 +22,8 @@
       paper_url: https://doi.org/10.1126/science.ady6893
       meta:
         - { label: Species, value: Human }
-        - { label: Tissue, value: "Heart, 36 donors" }
+        - { label: Tissue, value: Heart }
+        - { label: Cell number, value: "759,222" }
         - { label: Assays, value: "Multiome, Droplet Paired-Tag, Droplet Hi-C" }
 
 - section: protocols
@@ -43,3 +45,11 @@
       meta:
         - { label: Readouts, value: 3D chromatin contacts }
         - { label: Platform, value: 10x Chromium }
+
+- section: models
+  items:
+    - title: EpiBRAIN
+      description: A sequence-to-function model trained on human brain epigenome for variant prioritization.
+      img: assets/img/EpiBRAIN_logo.svg
+      url: https://miniatlas.nygenome.org/variants
+      code_url: https://github.com/zhongguojie1998/EpiBRAIN/tree/main

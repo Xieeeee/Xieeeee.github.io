@@ -7,7 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-Datasets and protocols that I have shared with the community.
+Methods and data that my team have contributed to the scientific community.
 
 <!-- pages/resources.md -->
 <div class="resources">

@@ -27,5 +27,8 @@
     {% if resource.paper_url %}
       <a class="resource-row__paper" href="{{ resource.paper_url }}" target="_blank" rel="noopener noreferrer">Original publication&nbsp;&#8599;</a>
     {% endif %}
+    {% if resource.code_url %}
+      <a class="resource-row__paper" href="{{ resource.code_url }}" target="_blank" rel="noopener noreferrer">GitHub&nbsp;&#8599;</a>
+    {% endif %}
   </div>
 </article>

@@ -41,6 +41,13 @@
       window.location.href = link.href;
     }, 400);
   });
+
+  // Back/forward cache restores the page as it was left (faded out); undo the fade
+  window.addEventListener("pageshow", function (e) {
+    if (e.persisted) {
+      document.body.classList.remove("page-leaving");
+    }
+  });
 })();
 
 $(document).ready(function () {
