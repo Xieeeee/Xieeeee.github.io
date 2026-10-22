@@ -8,7 +8,9 @@ category: method
 related_publications: false
 keywords: [single-cell multiome, epigenomics, histone modifications, transcriptome]
 paper_url: https://www.nature.com/articles/s41594-023-01060-1
-paper_name: Nat. Struct. Mol. Biol. (2023)
+paper_name: Nature Structural & Molecular Biology
+year: 2023
+summary: Introduces Droplet Paired-Tag, a fast and robust droplet-based method that profiles histone modifications and gene expression in the same single cells.
 ---
 
 Droplet Paired-Tag is a convenient and robust method for multi-modal profiling of histone modifications and transcriptome in single cell.

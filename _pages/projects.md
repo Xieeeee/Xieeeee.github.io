@@ -16,26 +16,9 @@ Being able to probe the dynamics of the epigenome in individual cells can provid
 My current research focuses on developing a toolkit to measure various types of epigenetic changes at the single-cell level. This will enable us to capture a comprehensive picture of how these changes influence cell function and disease progression.
 
 <!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <div class="research-listing">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-  </div>
-  {% endfor %}
-{% else %}
+<div class="projects project-index">
   {% assign sorted_projects = site.projects | sort: "importance" %}
-  <div class="research-listing">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-  </div>
-{% endif %}
+  {% for project in sorted_projects %}
+    {% include project_row.liquid %}
+  {% endfor %}
 </div>

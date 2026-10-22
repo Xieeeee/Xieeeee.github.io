@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "MiniAtlas: a multimodal histone modification and transcriptome atlas for adult human brain"
+title: Human brain multimodal atlas
+subtitle: A multimodal histone modification and transcriptome atlas for adult human brain
 description: "Single-Cell Atlas of Transcription and Chromatin States Reveals Regulatory Programs in the Human Brain"
 img: assets/img/MiniAtlas_logo.png
 importance: 3
@@ -8,7 +9,9 @@ category: application
 related_publications: false
 keywords: [single-cell multiome, neuroscience, chromatin states, developmental memory]
 paper_url: https://www.biorxiv.org/content/10.64898/2026.02.02.703166v1
-paper_name: bioRxiv. (2026)
+paper_name: bioRxiv
+year: 2026
+summary: Jointly profiles transcriptomes with active and repressive histone marks in over 750,000 nuclei across 18 human brain regions and tells how developmental information is stored in repressive chromatin.
 ---
 
 The extraordinary diversity of cell types in the human brain is sustained by complex gene regulatory programs that stabilize cellular identity throughout lifespan. While recent single-cell transcriptomic atlases have cataloged this diversity in detail, the epigenetic mechanisms that establish and maintain these programs have remained difficult to access at scale and resolution.

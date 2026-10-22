@@ -1,0 +1,31 @@
+{% capture project_link %}{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}{% endcapture %}
+<article class="project-row">
+  <a class="project-row__cover" href="{{ project_link }}" aria-label="{{ project.title }}"></a>
+  <div class="project-row__text">
+    <p class="project-row__eyebrow">{{ project.category }} &middot; {{ project.year }}</p>
+    <h2 class="project-row__title">{{ project.title }}</h2>
+    {% if project.subtitle %}
+      <p class="project-row__summary">{{ project.subtitle }}</p>
+    {% else %}
+      <p class="project-row__summary">{{ project.description }}</p>
+    {% endif %}
+    {% if project.summary %}
+      <p class="project-row__finding">{{ project.summary }}</p>
+    {% endif %}
+    <div class="project-row__links">
+      {% if project.paper_url %}
+        <a href="{{ project.paper_url }}" target="_blank" rel="noopener noreferrer">
+          {{- project.paper_name | default: 'Paper' | escape }}&nbsp;&#8599;</a
+        >
+      {% endif %}
+      {% if project.github %}
+        <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer">Code&nbsp;&#8599;</a>
+      {% endif %}
+    </div>
+  </div>
+  {% if project.img %}
+    <div class="project-row__tile">
+      <img src="{{ project.img | prepend: '/' | relative_url }}" alt="" loading="lazy">
+    </div>
+  {% endif %}
+</article>

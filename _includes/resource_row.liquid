@@ -1,0 +1,31 @@
+<article class="resource-row">
+  {% if resource.img %}
+    <a class="resource-row__logo" href="{{ resource.url }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+      <img src="{{ resource.img | prepend: '/' | relative_url }}" alt="" loading="lazy">
+    </a>
+  {% endif %}
+  <div class="resource-row__body">
+    <h3 class="resource-row__title">
+      <a href="{{ resource.url }}" target="_blank" rel="noopener noreferrer">{{ resource.title }}</a>
+    </h3>
+    <p class="resource-row__description">{{ resource.description }}</p>
+  </div>
+  {% if resource.meta %}
+    <dl class="resource-row__meta">
+      {% for item in resource.meta %}
+        <div>
+          <dt>{{ item.label }}</dt>
+          <dd>{{ item.value }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+  {% endif %}
+  <div class="resource-row__actions">
+    <a class="resource-row__open" href="{{ resource.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ resource.title }}">
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    {% if resource.paper_url %}
+      <a class="resource-row__paper" href="{{ resource.paper_url }}" target="_blank" rel="noopener noreferrer">Original publication&nbsp;&#8599;</a>
+    {% endif %}
+  </div>
+</article>

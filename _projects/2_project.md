@@ -8,7 +8,9 @@ category: method
 related_publications: false
 keywords: [single-cell, single-cell multiome, chromatin conformation, transcriptome]
 paper_url: https://www.nature.com/articles/s41587-024-02447-1
-paper_name: Nat. Biotechnol. (2025)
+paper_name: Nature Biotechnology
+year: 2025
+summary: Introduces Droplet Hi-C, which profiles 3D chromatin architecture in single cells at scale and detects structural variants and ecDNA in cancer cells.
 ---
 
 Droplet Hi-C is a high-throughput method for profiling chromatin conformation in single cells.

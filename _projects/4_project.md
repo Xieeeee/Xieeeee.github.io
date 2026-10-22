@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "FNIH Heart: dissect regulatory networks underlying heart failures"
+title: Human heart failure multimodal atlas
+subtitle: Dissect regulatory networks underlying heart failures
 description: Single cell multiomics and chromatin architecture reveal human heart failure gene regulatory programs
 img: assets/img/FNIH_Heart_logo.png
 importance: 4
@@ -8,7 +9,9 @@ category: application
 related_publications: false
 keywords: [single-cell multiome, heart failures, gene regulatory networks, chromatin organization, risk variants]
 paper_url: https://doi.org/10.1126/science.ady6893
-paper_name: Science. (2026)
+paper_name: Science
+year: 2026
+summary: Maps transcriptomes, chromatin states and 3D genome structure in failing and nonfailing human hearts to reveal cell-type-specific regulatory changes in heart failure.
 ---
 
 The human heart dynamically adapts to diverse environmental conditions and stresses in health andmdisease; yet how maladaptive gene regulatory responses of specific cardiac cell types contribute to heart failure remains incompletely understood. Here, we present an unprecedented, comprehensive interrogation of cell type-specific gene regulation across 36 human hearts, encompassing non-failing and failing (ischemic and non-ischemic) conditions. Utilizing a novel pooled sample strategy combined with cutting-edge single-cell multimodal assays—including single-cell multiome profiling (10x Chromium single-cell ATAC-seq and RNA-seq), joint single-cell histone modification and gene expression profiling (Droplet Paired-Tag), and single-cell chromatin conformation capture (Droplet Hi-C)—we systematically characterized transcriptional states, chromatin accessibility, histone modifications, and 3D chromatin architecture across all four heart chambers (left and right ventricles and atria).

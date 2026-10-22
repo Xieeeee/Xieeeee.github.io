@@ -1,0 +1,45 @@
+# Resources shared with the community, shown on _pages/resources.md.
+# Each section renders as a list of spec-sheet rows (_includes/resource_row.liquid).
+# `meta` is the label/value grid under each row (4 columns; a third item spans two).
+
+- section: datasets
+  items:
+    - title: Human brain multimodal atlas
+      description: Single-cell atlas of transcription and chromatin states in the adult human brain.
+      img: assets/img/MiniAtlas_logo.png
+      url: https://miniatlas.nygenome.org/
+      paper_url: https://doi.org/10.64898/2026.02.02.703166
+      meta:
+        - { label: Species, value: Human }
+        - { label: Tissue, value: "Brain, 18 regions" }
+        - { label: Assays, value: RNA + active and repressive histone marks }
+
+    - title: Human heart failure multimodal atlas
+      description: Transcriptomes, chromatin states and 3D genome structure in failing and non-failing human hearts.
+      img: assets/img/FNIH_Heart_logo.png
+      url: https://epigenome.wustl.edu/HeartEpigenome/
+      paper_url: https://doi.org/10.1126/science.ady6893
+      meta:
+        - { label: Species, value: Human }
+        - { label: Tissue, value: "Heart, 36 donors" }
+        - { label: Assays, value: "Multiome, Droplet Paired-Tag, Droplet Hi-C" }
+
+- section: protocols
+  items:
+    - title: Droplet Paired-Tag
+      description: Droplet-based single-cell joint profiling of histone modifications and transcriptome.
+      img: assets/img/DPT_logo_notext.png
+      url: https://www.protocols.io/view/droplet-based-single-cell-joint-profiling-of-histo-eq2ly6kergx9/v1
+      paper_url: https://doi.org/10.1038/s41594-023-01060-1
+      meta:
+        - { label: Readouts, value: Histone marks + RNA }
+        - { label: Platform, value: 10x Chromium }
+
+    - title: Droplet Hi-C
+      description: Fast and scalable profiling of chromatin architecture in single cells.
+      img: assets/img/DHC_logo_final_notext.png
+      url: https://www.protocols.io/view/droplet-hi-c-for-fast-and-scalable-profiling-of-ch-261ge5qwyg47/v1
+      paper_url: https://doi.org/10.1038/s41587-024-02447-1
+      meta:
+        - { label: Readouts, value: 3D chromatin contacts }
+        - { label: Platform, value: 10x Chromium }

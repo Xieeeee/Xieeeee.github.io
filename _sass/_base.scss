@@ -1019,6 +1019,336 @@ footer.sticky-bottom {
   }
 }
 
+// Research project index (editorial rows)
+
+.project-index {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--global-text-color);
+}
+
+.project-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  animation: fadeInUp 0.5s cubic-bezier(0.2, 0.3, 0, 1) both;
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.08}s;
+    }
+  }
+
+  &:hover {
+    .project-row__title {
+      color: var(--global-theme-color);
+    }
+
+    .project-row__tile img {
+      transform: scale(1.08);
+    }
+  }
+
+  @media (max-width: 575px) {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+    padding: 1.75rem 0;
+  }
+}
+
+// Full-row link sits under the paper and code links
+.project-row__cover {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.project-row__eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.project-row__title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--global-text-color);
+  transition: color 0.2s ease;
+
+  @media (max-width: 575px) {
+    font-size: 1.4rem;
+  }
+}
+
+.project-row__summary {
+  margin: 0.6rem 0 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--global-text-color);
+}
+
+.project-row__finding {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+}
+
+.project-row__links {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+
+  a {
+    font-size: 0.85rem;
+    color: var(--global-text-color);
+    border-bottom: 1px solid var(--global-divider-color);
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
+
+.project-row__tile {
+  position: relative;
+  order: -1;
+  aspect-ratio: 1 / 1;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+    transform-origin: left center;
+    transition: transform 0.6s cubic-bezier(0.2, 0.3, 0, 1);
+  }
+}
+
+// Resources (spec-sheet rows)
+
+.resources {
+  margin-top: 1rem;
+}
+
+.resource-section {
+  margin-bottom: 3rem;
+}
+
+.resource-section__title {
+  margin: 2.5rem 0 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--global-text-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--global-text-color);
+}
+
+.resource-row {
+  position: relative;
+  display: grid;
+  isolation: isolate;
+  grid-template-columns: 56px minmax(0, 1fr) 10rem;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  animation: fadeInUp 0.5s cubic-bezier(0.2, 0.3, 0, 1) both;
+
+  // Hover tint bleeds past the text column without widening the divider
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 -1rem;
+    z-index: -1;
+    border-radius: 6px;
+    background-color: var(--global-code-bg-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  @for $i from 1 through 6 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: #{$i * 0.08}s;
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    .resource-row__title a {
+      color: var(--global-theme-color);
+    }
+
+    .resource-row__open {
+      color: var(--global-bg-color);
+      background-color: var(--global-text-color);
+      border-color: var(--global-text-color);
+
+      i {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+.resource-row__logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 575px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.resource-row__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.resource-row__description {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--global-text-color);
+}
+
+.resource-row__meta {
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem 1.5rem;
+  margin: -0.4rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px dashed var(--global-divider-color);
+
+  dt {
+    margin-bottom: 0.2rem;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  dd {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: var(--global-text-color);
+  }
+
+  // A third field (datasets: assays) takes the two remaining columns
+  > div:nth-child(3):last-child {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.resource-row__actions {
+  grid-row: 1;
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  text-align: right;
+
+  @media (max-width: 575px) {
+    grid-row: auto;
+    grid-column: 2;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.resource-row__open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 50%;
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+
+  i {
+    transition: transform 0.25s ease;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.resource-row__paper {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+}
+
 // Publications
 
 .publications {
