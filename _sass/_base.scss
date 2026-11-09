@@ -417,6 +417,12 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Site name (navbar brand and about-page heading): one family, one weight
+.site-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
 .navbar.navbar-light {
   a {
     &:hover {
